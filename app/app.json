@@ -1,0 +1,7 @@
+{
+  "name": "OpenCalc",
+  "displayName": "OpenCalc",
+  "expo": {
+    "sdkVersion": "27.0.0"
+  }
+}
