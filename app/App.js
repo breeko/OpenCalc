@@ -1,9 +1,8 @@
+//@flow
 import React, {Component} from 'react';
 import {StyleSheet, View, Clipboard} from 'react-native';
 
 import CalculatorResponse from './components/CalculatorResponse';
-import CalculatorButtonsContainer from './components/CalculatorButtonsContainer';
-import CalculatorAdditionalButtonsContainer from './components/CalculatorAdditionalButtonsContainer';
 
 import CalculatorBrain from './core/CalculatorBrain';
 
@@ -12,76 +11,85 @@ import Constants from './constants/Constants'
 
 import LayoutBuilder from './utils/LayoutBuilder'
 import {isNumeric} from './utils/Utils'
-import { Orientation } from './utils/Orientation';
+import { Orientation, OrientationType } from './utils/Orientation';
 
-import SideMenu from 'react-native-side-menu';
+import Toast, {DURATION} from 'react-native-easy-toast';
 
-export default class App extends Component {
-  constructor() {
-    super();
+type Props = {
+  brain: CalculatorBrain,
+};
 
-    this.brain = new CalculatorBrain();
+type State = {
+  display: string,
+  description: string,
+  altButtons: boolean,
+  stored: string,
+  orientation: number,
+};
 
-    this.state = {
-      display: ' ',
-      description: ' ',
-      altButtons: false,
-      stored: 0.0
-    };
-  }
-  
-  _handleCopyPress(value) {
-    const cleanValue = value.toString().replace(',','');
-    Clipboard.setString(cleanValue.toString());
-  }
-  
-  _handlePastePress(value) {
-    this.brain.clear();
-    this.brain.setItem(value);
-    this.updateDisplay();
-  }
+export default class App extends Component<Props, State> {
+  static defaultProps = {
+    brain: new CalculatorBrain()
+  };
+
+  state = {
+    display: ' ',
+    description: ' ',
+    altButtons: false,
+    stored: '',
+    orientation: OrientationType.Portrait,
+  };
 
   componentDidMount() {
     this._updateOrientation();
   }
 
-  _updateOrientation(layout) {
+  _updateOrientation() {
     const orientation = Orientation.getOrientation();
-    this.setState({orientation: orientation, width: Constants.width, height: Constants.height});
+    this.setState({
+      orientation: orientation});
   }
 
-  _orientationDidChange(orientation) {
+  _orientationDidChange() {
     this._updateOrientation();
   }
 
-  _reset(button) {
-    this.brain.clear();
+  _reset() {
+    this.props.brain.clear();
     this.updateDisplay();
   }
 
-  _store(button) {
-    const result = this.brain.getResult().replace(' ','').replace(',','');
-    const display = this.brain.getDisplay().replace(' ','').replace(',','');
-    if (isNumeric(result)) {
-      this.setState({stored: result});
-    } else if (isNumeric(display)) {
-      this.setState({stored: display})
+  _handleCopyPress() {
+    const result: string = this.props.brain.getResult().replace(' ','').replace(',','');
+    const display: string = this.props.brain.getDisplay().replace(' ','').replace(',','');
+    const saveString = isNumeric(result) ? result : isNumeric(display) ? display : null;
+    if (saveString) {
+      Clipboard.setString(saveString);      
+      this.refs.toast.show('Copied ' + saveString + ' to clipboard', DURATION.LENGTH_SHORT, () => {});
+    } else {
+      this.refs.toast.show('Unable to copy to clipboard', DURATION.LENGTH_SHORT, () => {});
     }
   }
 
-  _recall(button) {
-    this.brain.clear();
-    this.brain.setItem(this.state.stored);
-    this.updateDisplay();
+  async _handlePastePress() {
+    const value = await Clipboard.getString();
+
+    if (isNumeric(value)) {
+      this.props.brain.clear();
+      this.props.brain.setItem(value);
+      this.updateDisplay();
+    } else {
+      this.refs.toast.show('Invalid clipboard value of ' + value);
+    }
   }
 
-  _handleButtonPress(button) {
-    this.brain.setItem(button);
+  _handleButtonPress(button: string) {
+    this.props.brain.setItem(button);
     this.updateDisplay();
     }
 
-  _deleteLast(button) {
-    this.brain.deleteLast();
+  _deleteLast() {
+    this.props.brain.deleteLast();
     this.updateDisplay();
   }
 
@@ -90,37 +98,38 @@ export default class App extends Component {
   }
 
   updateDisplay() {
-    const newDisplay = this.brain.getDisplay();
-    const newDescription = this.brain.getResult();
-
+    const newDisplay = this.props.brain.getDisplay();
+    const newDescription = this.props.brain.getResult();
     this.setState({
       display: newDisplay,
       description: newDescription
     });
   }
 
-  onMenuItemSelected = item =>
-    this.setState({
-      isOpen: false,
-      selectedItem: item,
-    });
-
   render() {
-    const buttonContainer = LayoutBuilder.buildButtonContainer(this);
-    const switchButtons = LayoutBuilder.buildSwitchButtons(this);
+    const buttonContainer = LayoutBuilder.buildButtonContainer(
+      this,
+      this.state.orientation,
+      this.state.altButtons,
+      this._handleButtonPress,
+      this._reset,
+      this._deleteLast,
+      this._handleCopyPress,
+      this._handlePastePress,
+    );
+    const switchButtons = (this.state.orientation === OrientationType.Portrait) ? 
+      LayoutBuilder.buildSwitchButtons(this, this._switchButtons) : 
+      <View/>;
 
     return (
       <View style={styles.container} onLayout={this._updateOrientation.bind(this)}>
+        <Toast ref="toast" position='top' opacity={0.8}/>
         <CalculatorResponse
-            result={this.state.display}
-            description={this.state.description}
-            handleCopyPress={this._handleCopyPress.bind(this)}
-            handlePastePress={this._handlePastePress.bind(this)}
-            onOrientationChanged={this._updateOrientation.bind(this)}
-            width={this.state.width}
-          />
-          {buttonContainer}
-          {switchButtons}
+          result={this.state.display}
+          description={this.state.description}
+          orientation={this.state.orientation}/>
+        {buttonContainer}
+        {switchButtons}
       </View>
     );
   }

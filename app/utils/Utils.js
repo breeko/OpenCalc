@@ -1,43 +1,46 @@
+//@flow
 import Configs from '../configs/Configs';
-import {Dimensions} from 'react-native';
+import {DECIMAL} from '../core/Operations';
 
-const zip = (...rows) => [...rows[0]].map((_,c) => rows.map(row => row[c]));
+const zip = (...rows: Array<any>) => [...rows[0]].map((_,c) => rows.map(row => row[c]));
 
-export function zipWithIndex(arr) {
-	const index = [...Array(arr.length).keys()];
-	return zip(index, arr);
-}
-
-export function zipWithIndexTwice(arr) {
-	const index = [...Array(arr.length).keys()];
+export function zipWithIndexTwice<A>(arr: Array<A>): Array<[number,number,A]> {
+	const index: Array<number> = Array();
+	for (let i=0; i<arr.length; i++) { index.push(i); }
 	return zip(index, index, arr);
 }
 
-export function lastOrNull(arr) {
+export function lastOrNull<A>(arr: Array<A>): ?A {
 	if (arr.length === 0) {
 		return null;
 	}
 	return arr[arr.length - 1];
 }
 
-export function isNumeric(n) {
+export function isNumeric(n: string): boolean {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
-export function isInArray(value, array) {
-	return array.map(x => x.toString()).indexOf(value.toString()) > -1;
-}  
-
-export function numberWithCommas(x) {
-	const rounded = Math.round(x * Math.pow(10.0, Configs.MaxPrecision)) / Math.pow(10.0, Configs.MaxPrecision);
-	var parts = rounded.toString().split(".");
-	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	return parts.join(".");
+export function isInArray<A>(value: A, array: Array<A>) {
+	return array.indexOf(value) > -1;
 }
 
-export function swapArrayElements(arr, indexA, indexB) {
-  const temp = arr[indexA];
-  arr[indexA] = arr[indexB];
-  arr[indexB] = temp;
+export function numberWithCommas(x: string, round: ?boolean = true) {
+	const xNumber = Number(x);
+	const parseRegex: RegExp = /\B(?=(\d{3})+(?!\d))/g
+	if (round) { 
+		if (xNumber >= Configs.MinScientificNotation) {
+			return xNumber.toExponential(Configs.MaxPrecision);
+		}
+		return xNumber.toLocaleString('en', { maximumFractionDigits: Configs.MaxPrecision })
+	} else {
+		const xString = x.toString();
+		const parts = xString.split(DECIMAL);
+		const head = parts[0].replace(parseRegex, ",") || '0';
+		const tail = (parts.length > 1) ? parts[1].toString() : '';
+		const decimalJoin = (xString.indexOf(DECIMAL) < 0) ? '' : DECIMAL;
+		return head + decimalJoin + tail;
+	}
 }
+
 

@@ -1,4 +1,5 @@
-import React from 'react';
+//@flow
+import React, {Component} from 'react';
 import {View} from 'react-native';
 import {TouchableOpacity} from 'react-native';
 
@@ -13,53 +14,55 @@ import { OrientationType } from '../utils/Orientation';
 
 export default class LayoutBuilder {
     
-    static buildSwitchButtons(obj) {
-        if (obj.state.orientation === OrientationType.Portrait) {
-            const styles = {
-                handle: {
-                    position: 'absolute',
-                    backgroundColor: Colors.BLUE_DARK,
-                    borderTopRightRadius: 20,
-                    borderBottomRightRadius: 20,
-                    width: 10,
-                    height: 100,
-                    top: Constants.maxDimension / 2.0, 
-                }
+    static buildSwitchButtons(obj: Component<any, any>, onPress: () => void) {
+        const styles = {
+            handle: {
+                position: 'absolute',
+                backgroundColor: Colors.BLUE_DARK,
+                borderTopRightRadius: 20,
+                borderBottomRightRadius: 20,
+                width: Constants.width / 40.0,
+                height: Constants.height / 5.0,
+                top: Constants.maxDimension / 2.0, 
             }
-            const handle = <TouchableOpacity style={styles.handle} onPress={obj._switchButtons.bind(obj)}><View/></TouchableOpacity>;
-            return handle;
-        } else {
-            return <View/>;
         }
+        const handle = <TouchableOpacity style={styles.handle} onPress={onPress.bind(obj)}><View/></TouchableOpacity>;
+        return handle;
     }
     
-    static buildButtonContainer(obj) {
-
+    static buildButtonContainer(
+        obj: Component<any, any>,
+        orientation: number,
+        altButtons: boolean,
+        _handleButtonPress: (button: string) => any,
+        _reset: () => any,
+        _deleteLast: () => any,
+        _handleCopyPress: () => any,
+        _handlePastePress: () => any,
+    ) {
             
         const calculatorButtonsContainer = <CalculatorButtonsContainer
-                handleButtonPress={obj._handleButtonPress.bind(obj)}
-                reset={obj._reset.bind(obj)}
-                deleteLast={obj._deleteLast.bind(obj)}
-                store={obj._store.bind(obj)}
-                recall={obj._recall.bind(obj)}/>;
+                handleButtonPress={_handleButtonPress.bind(obj)}
+                reset={_reset.bind(obj)}
+                deleteLast={_deleteLast.bind(obj)}/>;
             
         const calculatorAdditionalButtonsContainer = <CalculatorAdditionalButtonsContainer
-            handleButtonPress={obj._handleButtonPress.bind(obj)}
-            reset={obj._reset.bind(obj)}
-            deleteLast={obj._deleteLast.bind(obj)}
-            store={obj._store.bind(obj)}
-            recall={obj._recall.bind(obj)}/>;
+            handleButtonPress={_handleButtonPress.bind(obj)}
+            reset={_reset.bind(obj)}
+            deleteLast={_deleteLast.bind(obj)}
+            copy={_handleCopyPress.bind(obj)}
+            paste={_handlePastePress.bind(obj)}/>;
 
         const calculatorLandscapeButtonsContainer = <CalculatorLandscapeButtonsContainer
-            handleButtonPress={obj._handleButtonPress.bind(obj)}
-            reset={obj._reset.bind(obj)}
-            deleteLast={obj._deleteLast.bind(obj)}
-            store={obj._store.bind(obj)}
-            recall={obj._recall.bind(obj)}/>;
+            handleButtonPress={_handleButtonPress.bind(obj)}
+            reset={_reset.bind(obj)}
+            deleteLast={_deleteLast.bind(obj)}
+            copy={_handleCopyPress.bind(obj)}
+            paste={_handlePastePress.bind(obj)}/>;
 
-        if (obj.state.orientation === OrientationType.Portrait) {
-            return (obj.state.altButtons) ? calculatorAdditionalButtonsContainer : calculatorButtonsContainer;
-        } else if (obj.state.orientation === OrientationType.Landscape) {
+        if (orientation === OrientationType.Portrait) {
+            return (altButtons) ? calculatorAdditionalButtonsContainer : calculatorButtonsContainer;
+        } else if (orientation === OrientationType.Landscape) {
             return calculatorLandscapeButtonsContainer;
         }
     }    

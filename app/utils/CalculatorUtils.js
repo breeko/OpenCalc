@@ -1,5 +1,5 @@
 import {isInArray} from "./Utils";
-import {OperationType, OperationSubType} from "../core/Operations";
+import {OperationType, OperationSubType} from "../core/OperationTypes";
 
 export default class CalculatorUtils {
 

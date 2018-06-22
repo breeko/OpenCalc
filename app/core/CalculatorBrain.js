@@ -1,25 +1,27 @@
-import {OperationArgs, OperationType, newOperation, OperationSubType} from './Operations';
+//@flow
 
-import {zipWithIndexTwice, lastOrNull, isInArray, numberWithCommas, isNumeric, swapArrayElements} from '../utils/Utils';
+import {Operation, newOperation} from './Operations';
+import {OperationType, OperationSubType, OperationArgs} from './OperationTypes';
+
+import {zipWithIndexTwice, lastOrNull, isInArray, numberWithCommas, isNumeric} from '../utils/Utils';
 import CalcUtils from '../utils/CalculatorUtils';
-import Validator from "../utils/Validator";
+import Validator from '../utils/Validator';
 
 export default class CalculatorBrain {
-	constructor() {
-		this.clear();
-	}
+	queue: Array<Operation> = [];
+	cleared: boolean = true;
 
 	clear() {
 		this.queue = [];
-		this.cleared = true;
 	}
 
-	setItem(item) {
-		let op = newOperation(item, this.queue);
-		let opToAdd;
+	setItem(item: string) {
+		let op: Operation = newOperation(item, this.queue);
+		let opToAdd: ?Operation;
+		let cleared = false;
 		if (op.operationType == OperationType.Equals) {
 			opToAdd = this.setEquals(op);
-
+			cleared = true;
 		} else if (op.operationType === OperationType.Constant) {
 			opToAdd = this.setOperand(op);
 		} else if (op.operationType === OperationType.Operation) {
@@ -30,20 +32,22 @@ export default class CalculatorBrain {
 
 		if (opToAdd) {
 			this.queue.push(opToAdd);
-			this.cleared = false;
+			this.cleared = cleared;
 		}
 	}
 
-	setEquals(op) {
+	setEquals(op: Operation): ?Operation {
 		if (Validator.validEquals(op, this.queue)) {
-			let result = this.getResult();
-			opToAdd = newOperation(result, this.queue, operationArgs = new Set([OperationArgs.Cleared]));
+			const strResult: string = this.getResult();
+			const result: string = strResult.replace(/,/g, '');
+			const opArgs: Array<number> = new Array(OperationArgs.Cleared);
+			const opToAdd = newOperation(result, this.queue, opArgs);
 			this.clear();
 			return opToAdd;
 		}
 	}
 
-	setOperator(op) {
+	setOperator(op: Operation): ?Operation {
 		if (Validator.replaceOperator(op, this.queue)) {
 			this.queue.pop();
 		}
@@ -53,22 +57,22 @@ export default class CalculatorBrain {
 		}
 	}
 
-	setOperand(op) {
-		let newNumber;
-		// BUG: After equals, if a number is pressed it should override the input
-		if (!Validator.validDigit(op.val, this.queue)) {
+	setOperand(op: Operation): ?Operation {
+		let newNumber: ?string;
+		if (!Validator.validDigit(op.stringVal, this.queue)) {
 			return null;
 		}
 
-		let lastOp = lastOrNull(this.queue);
+		let lastOp: ?Operation = lastOrNull(this.queue);
 
-		if (lastOp && 
-			(lastOp.operationArgs.has(OperationArgs.Cleared) ||
-			(lastOp.operationArgs.has(OperationArgs.NotParseable))
-		)) {
+		if (lastOp && (
+				this.cleared ||
+				lastOp.operationArgs.has(OperationArgs.NotParseable) ||
+				op.operationArgs.has(OperationArgs.NotParseable) && lastOp.operationType === OperationType.Constant)
+		) {
 			this.queue.pop();
-		} else if (lastOp && lastOp.operationType == OperationType.Constant) {
-			lastNumber = this.queue.pop();
+		} else if (lastOp && lastOp.operationType === OperationType.Constant) {
+			const lastNumber = this.queue.pop();
 			newNumber = lastNumber.stringVal + op.stringVal;
 		}
 
@@ -79,7 +83,7 @@ export default class CalculatorBrain {
 		}
 	}
 
-	setParenthesis(op) {
+	setParenthesis(op: Operation) {
 		if (Validator.validParenthesis(op, this.queue)) {
 			return op;
 		}
@@ -91,44 +95,48 @@ export default class CalculatorBrain {
 			return;
 		}
 
-		const lastOp = this.queue[this.queue.length - 1].operationType;
-		if (lastOp === OperationType.Constant) {
+		const lastOpType: ?number = this.queue[this.queue.length - 1].operationType;
+		if (lastOpType === OperationType.Constant) {
 			const lastNum = this.queue.pop().stringVal;
 			if (lastNum.length > 1) {
 				const newNum = lastNum.substring(0, lastNum.length - 1);
 				this.queue.push(newOperation(newNum, this.queue));
 			}
 		} else {
-			this.queue.pop();
+			this.queue.pop(); // 32332608 / 9 => NaN
 		}
 	}
 
-	getResult() {
-		const operatorsBinary = this.queue.filter( op => op.operationSubType === OperationSubType.BinaryOp);
-		const operatorsUnary = this.queue.filter( op => isInArray(op.operationSubType, Array(OperationSubType.UnaryOp, OperationSubType.BackwardUnaryOp)));
-		const numbers = this.queue.filter(op => op.operationType === OperationType.Constant);
-		
-		if (numbers.length === 0 || (numbers.length < 2 && operatorsUnary.length < 2)) {
-			return ' '; // just one number, e.g. 123 or 1%
-		} else if (numbers.length === 1) {
-			return numberWithCommas(numbers[0].stringVal); // one number and one operator e.g. 1+ => 1
-		}
-
+	getResult(): string {
+		const numbers: Array<Operation> = this.queue.filter(op => op.operationType === OperationType.Constant);
 		const operatorsWithParenthesis = CalcUtils.getOperatorsWithParenthesis(this.queue);
 		const evaluatedOps = this.evaluateParenthesis(operatorsWithParenthesis);
-		return this.evaluate(numbers, evaluatedOps, 0.0);
+		try { 
+			const out = this.evaluate(numbers, evaluatedOps, null);
+			if (out !== null && out !== undefined) {
+				return numberWithCommas(out.toString());
+			} else {
+				const first: ?Operation = numbers[0];
+				if (first && first.operationArgs.has(OperationArgs.PrintAlone)) {
+					return numberWithCommas(first.val);
+				}
+				return ' ';
+			}
+		} catch (e) {
+			return e.message;
+		}
 	}
 
 
-	evaluateParenthesis(operators, parenthesisPriority=0) {
+	evaluateParenthesis(operators: Array<Operation>, parenthesisPriority:number = 0): Array<Operation> {
 		// Updates operators priorities with parenthesis
 		if (operators.length == 0) {
 			return operators;
 		}
 
-		const op = operators[0];
-		const remainingOps = operators.slice(1, operators.length);
-		let evaluatedOps = [];
+		const op: Operation = operators[0];
+		const remainingOps: Array<Operation> = operators.slice(1, operators.length);
+		let evaluatedOps: Array<Operation> = [];
 
 		if (op.operationType === OperationType.Parenthesis) {
 			parenthesisPriority += op.priority;
@@ -138,23 +146,30 @@ export default class CalculatorBrain {
 			evaluatedOps.push(op);
 		}
 		
-		return evaluatedOps.concat(this.evaluateParenthesis(remainingOps, parenthesisPriority));
+		const remaining: Array<Operation> = this.evaluateParenthesis(remainingOps, parenthesisPriority);
+		return evaluatedOps.concat(remaining);
 	}
 
-	getDisplay() {
+	getDisplay(): string {
 		if (this.queue.length === 0) {
 			return ' '
 		}
-		return this.queue.map(x => (x.operationType == OperationType.Constant && !x.operationArgs.has(OperationArgs.PrintAsString)) ? numberWithCommas(x.val) : x.stringVal).join(' ')
+		return this.queue.map(x => (
+			x.operationType == OperationType.Constant && 
+			!x.operationArgs.has(OperationArgs.PrintAsString)) ? 
+				numberWithCommas(x.stringVal, false) : 
+				x.stringVal).join(' ')
 	}
 
-	evaluate(numbers, ops, acc) {		
+	evaluate(numbers: Array<Operation>, ops: Array<Operation>, acc: ?number): ?number {
 		if (ops.length === 0) {
-			return isNumeric(acc) ? numberWithCommas(acc) : acc;
+			return acc;
 		}
 
-		let zippedOps = zipWithIndexTwice(ops); // e.g. 1 + 2 + 3 => returns (0, 0, +) (0, 0, -)
-		let numUnary = 0;
+		let zippedOps: Array<[number,number,Operation]> = zipWithIndexTwice(ops); // e.g. 1 + 2 + 3 => returns (0, 0, +) (0, 0, -)
+		let numUnary: number = 0;
+		console.log('zipped: ');
+		console.log(zippedOps);
 		for (let idx = 0; idx < zippedOps.length; idx++) {
 			// adjust for unary ops
 			// e.g. sin cos 1 => 
@@ -166,7 +181,7 @@ export default class CalculatorBrain {
 			}
 		}
 
-		let maxPriority = zippedOps.reduce(function(a, b) { 
+		let maxPriority: [number,number,Operation] = zippedOps.reduce(function(a, b) { 
 			if (a[2].operationSubType === OperationSubType.UnaryOp) {
 				// right to left on unary ops
 				// e.g. sin cos 1, evaluate cos(1) first
@@ -174,55 +189,53 @@ export default class CalculatorBrain {
 			}
 			return a[2].priority >= b[2].priority ? a : b;});
 
-		const opIdx = maxPriority[0];
-		const numIdx = maxPriority[1];
-		const op = maxPriority[2];
+		const opIdx: number = maxPriority[0];
+		const numIdx: number = maxPriority[1];
+		const op: Operation = maxPriority[2];
 
-		const num1 = numbers[numIdx];
-		const num2 = numbers[numIdx + 1];
-		let head = numbers.slice(0, numIdx);
-		let tail = numbers.slice(numIdx, numbers.length);
+		const num1: ?Operation = numbers[numIdx];
+		const num2: ?Operation = numbers[numIdx + 1];
+		let head: Array<Operation> = numbers.slice(0, numIdx);
+		let tail: Array<Operation> = numbers.slice(numIdx, numbers.length);
 
-		let evaluatedNumber = false;
+		let evaluatedNumber: boolean = false;
 
-		if (op.operationSubType === OperationSubType.BackwardUnaryOp) {
-			if (num1) {
+		if (num1) {
+			if (op.operationSubType === OperationSubType.BackwardUnaryOp) {
+				if (isNaN(num1.val)) { 
+					throw 'Number too long';
+				}
 				acc += op.val(num1.val);
 				tail = numbers.slice(numIdx + 1, numbers.length);
 				evaluatedNumber = true;
-			}
-		} else if (isInArray(op.operationSubType, Array(OperationSubType.UnaryOp, OperationSubType.BackwardUnaryOp))) {
-			if (num1) {
-				acc = op.val(num1.val);
-				tail = numbers.slice(numIdx + 1, numbers.length);
-				evaluatedNumber = true;
-			}
-		} else if (op.operationSubType === OperationSubType.BinaryOp) {
-			if (num1 && num2) {
-				acc = op.val(num1.val, num2.val);
-				tail = numbers.slice(numIdx + 2, numbers.length);
-				evaluatedNumber = true;
+			} else if (isInArray(op.operationSubType, Array(OperationSubType.UnaryOp, OperationSubType.BackwardUnaryOp))) {
+					acc = op.val(num1.val);
+					tail = numbers.slice(numIdx + 1, numbers.length);
+					evaluatedNumber = true;
+			} else if (op.operationSubType === OperationSubType.BinaryOp) {
+				if (num2) {
+					if (isNaN(num2.val)) { 
+						throw 'Number too long';
+					}
+					acc = op.val(num1.val, num2.val);
+					tail = numbers.slice(numIdx + 2, numbers.length);
+					evaluatedNumber = true;
+				}
 			}
 		}
 
-		let newNumbers;
-		if (evaluatedNumber) {
-			const newNumber = newOperation(acc, this.queue);
+		let newNumbers: Array<Operation>;
+		if (evaluatedNumber && acc !== null && acc !== undefined) {
+			const newNumber = newOperation(acc.toString(), this.queue);
 			newNumbers = head.concat([newNumber]).concat(tail);
 		} else {
 			newNumbers= head.concat(tail);
 		}
 
-		if (num1) {
-			console.log(num1.val);
-		}
-		if (num2) {
-			console.log(num2.val);
-		}
-		console.log(op.stringVal);
-		console.log("END");
-
-		const newOps = (opIdx > 0) ? ops.slice(0, opIdx).concat(ops.slice(opIdx + 1, ops.length)) : ops.slice(1, ops.length);
+		const newOps: Array<Operation> = (opIdx > 0) ? 
+			ops.slice(0, opIdx).concat(ops.slice(opIdx + 1, ops.length)) : 
+			ops.slice(1, ops.length);
+		
 		return this.evaluate(newNumbers, newOps, acc);
 
 	}

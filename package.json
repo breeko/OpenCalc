@@ -9,9 +9,8 @@
   "dependencies": {
     "eslint": "^4.19.1",
     "react": "16.3.1",
-    "react-native": "0.55.4",
-    "react-native-popup-menu": "^0.13.1",
-    "react-native-side-menu": "^1.1.3"
+    "react-native": "^0.55.4",
+    "react-native-easy-toast": "^1.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

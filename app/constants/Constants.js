@@ -1,3 +1,4 @@
+//@flow
 import {Dimensions} from 'react-native';
 
 const Constants = Object.freeze({

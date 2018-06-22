@@ -1,8 +1,14 @@
-import React from 'react';
+//@flow
+import React, {Component} from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Colors from '../constants/Colors';
 
-class CalculatorButton extends React.Component {
+type Props = {
+  operator: string,
+  handleButtonPress: (string) => any,
+}
+
+class CalculatorButton extends Component<Props> {
   render() {
     const {operator, handleButtonPress} = this.props;
 
@@ -10,7 +16,7 @@ class CalculatorButton extends React.Component {
       <TouchableOpacity
         style={styles.container}
         onPress={() => handleButtonPress(operator)}>
-        <Text style={styles.item}>
+        <Text adjustsFontSizeToFit numberOfLines={1} style={styles.item}>
           {operator}
         </Text>
       </TouchableOpacity>

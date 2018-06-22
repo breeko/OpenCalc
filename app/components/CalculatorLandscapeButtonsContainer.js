@@ -1,10 +1,19 @@
-import React from 'react';
+//@flow
+import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 import CalculatorButton from './CalculatorButton';
 
-export default class CalculatorLandscapeButtonsContainer extends React.Component {
+type Props = {
+  handleButtonPress: (string) => void,
+  reset: () => void,
+  deleteLast: () => void,
+  copy: () => void,
+  paste: () => void,
+};
+
+export default class CalculatorLandscapeButtonsContainer extends Component<Props> {
   render() {
-    const {handleButtonPress, reset, deleteLast, store, recall} = this.props;
+    const {handleButtonPress, reset, deleteLast, copy, paste} = this.props;
 
     return (
       <View style={styles.container}>
@@ -39,9 +48,9 @@ export default class CalculatorLandscapeButtonsContainer extends React.Component
           </View>
 
           <View style={styles.row}>
-              <CalculatorButton operator={'ln'} handleButtonPress={handleButtonPress}/>
+              <CalculatorButton operator={'log'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'log10'} handleButtonPress={handleButtonPress}/>
-              <CalculatorButton operator={'^'} handleButtonPress={handleButtonPress}/>
+              <CalculatorButton operator={'xⁿ'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'%'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'1'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'2'} handleButtonPress={handleButtonPress}/>
@@ -52,8 +61,8 @@ export default class CalculatorLandscapeButtonsContainer extends React.Component
           <View style={styles.row}>
               <CalculatorButton operator={'!'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'√'} handleButtonPress={handleButtonPress}/>
-              <CalculatorButton operator={'store'} handleButtonPress={store}/>
-              <CalculatorButton operator={'recall'} handleButtonPress={recall}/>              
+              <CalculatorButton operator={'copy'} handleButtonPress={copy}/>
+              <CalculatorButton operator={'paste'} handleButtonPress={paste}/>              
               <CalculatorButton operator={'.'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'0'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'='} handleButtonPress={handleButtonPress}/>
@@ -66,7 +75,7 @@ export default class CalculatorLandscapeButtonsContainer extends React.Component
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2.5,
+    flex: 2,
   },
 
   row: {

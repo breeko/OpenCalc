@@ -1,66 +1,49 @@
-import React from 'react';
-import {View, Text, ScrollView, StyleSheet, TouchableHighlight, Alert, Clipboard, Dimensions} from 'react-native';
+//@flow
+import React, {Component} from 'react';
+import {SafeAreaView, Text, ScrollView, StyleSheet, TouchableHighlight, Alert, Clipboard, Dimensions} from 'react-native';
 import Colors from '../constants/Colors';
 import Constants from '../constants/Constants'
 
 import { isNumeric } from '../utils/Utils';
-import {
-  MenuContext,
-  Menu,
-  MenuOptions,
-  MenuOption,
-  MenuTrigger,
-  MenuProvider,
-  renderers
-} from 'react-native-popup-menu';
+import { OrientationType } from '../utils/Orientation';
+
+type Props = {
+  result: string,
+  description: string,
+  orientation: number,
+};
 
 
-class CalculatorResponse extends React.Component {
+class CalculatorResponse extends Component<Props> {
+  resultsScroll: ScrollView;
+  descriptionScroll: ScrollView;
+
   constructor() {
     super();
-    this.state = { 
-      pasteDisabled: true 
-    };
   }
 
-  readFromClipboard = async () => {   
-    const clipboardContent = await Clipboard.getString();
-    this.setState({ 
-      copiedValue: clipboardContent, 
-      pasteDisabled: !isNumeric(clipboardContent) 
-    }); 
-  };
-
   render() {
-    const {result, description, handleCopyPress, handlePastePress, width} = this.props;
-    const copyDisabled = !isNumeric(description.replace(',',''));
-    this.readFromClipboard();
-
-    const {Popover} = renderers;
-
+    const {result, description, orientation} = this.props;
+    const copyDisabled = !description || !isNumeric(description.toString().replace(',',''));
+    const h = Constants.height;
+    const w = Constants.width;
+    
     return (
-      <MenuProvider style={styles.resultsContainer} >
-        <Menu renderer={Popover} style={styles.menu} rendererProps={{ preferredPlacement: 'bottom' }}>
-          <MenuTrigger style={styles.trigger}>
-            <View style={styles.resultContainer}>
-              <Text numberOfLines={1} style={styles.result}>{result}</Text>
-            </View>
-          </MenuTrigger>
-          <MenuOptions>
-            <MenuOption style={styles.option} onSelect={() => handlePastePress(this.state.copiedValue)} disabled={this.state.pasteDisabled} text='Paste'/>
-          </MenuOptions>
-        </Menu>
-        <Menu renderer={Popover} style={styles.menu} rendererProps={{preferredPlacement: 'bottom'}}>
-          <MenuTrigger style={styles.trigger}>
-          <View style={styles.resultContainer}>
-            <Text numberOfLines={1} style={styles.result}>{description}</Text>
-          </View>
-          </MenuTrigger>
-          <MenuOptions>
-            <MenuOption style={styles.option} onSelect={() => handleCopyPress(description)} disabled={copyDisabled} text='Copy'/>
-          </MenuOptions>
-        </Menu>
-      </MenuProvider>
+      <SafeAreaView style={styles.resultsContainer} >
+        <ScrollView 
+          style={styles.resultContainer}
+          ref={(scroll) => {this.resultsScroll = scroll;}}
+          onContentSizeChange={() => {this.resultsScroll.scrollToEnd(false);}}
+          horizontal>
+          <Text adjustsFontSizeToFit numberOfLines={1} style={styles.result}>{result}</Text>
+        </ScrollView>
+        <ScrollView 
+          style={styles.resultContainer } 
+          ref={(scroll) => {this.descriptionScroll = scroll;}}
+          horizontal>
+          <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.result, styles.description]}>{description}</Text>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 }
@@ -70,37 +53,26 @@ const styles = StyleSheet.create({
     resultsContainer: {
         backgroundColor: Colors.BLUE_DARK,
         alignItems: 'flex-end',
-        paddingRight: 10,
-        flexDirection: 'column'
-    },
-
-    menu: {
-      alignSelf: 'stretch',
-      flexDirection: 'row',
-      justifyContent: 'flex-end',
-      flex: 1,
+        margin: 20,
+        flexDirection: 'column',
+        flex: 1,
     },
 
     resultContainer: {
-    },
-
-    trigger: {
-      width: Constants.maxDimension,
-    },
-
-    option: {
-      margin: 5,
-      padding: 5,
+      backgroundColor: Colors.BLUE_DARK,
+      flex: 1,
     },
 
     result: {
       color: Colors.WHITE,
-      fontSize: 42,
-      textAlign: 'right',
+      fontSize: 50,
       textAlignVertical: 'center',
       margin: 5,
     },
 
-});
+    description: {
+      fontSize: 60,
+    },
+  });
 
 export default CalculatorResponse;

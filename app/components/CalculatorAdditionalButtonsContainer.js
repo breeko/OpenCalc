@@ -1,10 +1,19 @@
-import React from 'react';
+//@flow
+import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 import CalculatorButton from './CalculatorButton';
 
-class CalculatorAdditionalButtonsContainer extends React.Component {
+type Props = {
+  handleButtonPress: (string) => any,
+  reset: () => any,
+  deleteLast: () => any,
+  copy: () => any,
+  paste: () => any,
+};
+
+class CalculatorAdditionalButtonsContainer extends Component<Props> {
   render() {
-    const {handleButtonPress, reset, deleteLast, store, recall} = this.props;
+    const {handleButtonPress, reset, deleteLast, copy, paste} = this.props;
 
     return (
       <View style={styles.container}>
@@ -30,17 +39,17 @@ class CalculatorAdditionalButtonsContainer extends React.Component {
           </View>
 
           <View style={styles.row}>
-              <CalculatorButton operator={'ln'} handleButtonPress={handleButtonPress}/>
+              <CalculatorButton operator={'log'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'log10'} handleButtonPress={handleButtonPress}/>
-              <CalculatorButton operator={'^'} handleButtonPress={handleButtonPress}/>
+              <CalculatorButton operator={'xⁿ'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'%'} handleButtonPress={handleButtonPress}/>
           </View>
 
           <View style={styles.row}>
               <CalculatorButton operator={'!'} handleButtonPress={handleButtonPress}/>
               <CalculatorButton operator={'√'} handleButtonPress={handleButtonPress}/>
-              <CalculatorButton operator={'store'} handleButtonPress={store}/>
-              <CalculatorButton operator={'recall'} handleButtonPress={recall}/>
+              <CalculatorButton operator={'copy'} handleButtonPress={copy}/>
+              <CalculatorButton operator={'paste'} handleButtonPress={paste}/>
           </View>
       </View>
     );

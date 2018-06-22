@@ -1,8 +1,15 @@
-import React from 'react';
+//@flow
+import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 import CalculatorButton from './CalculatorButton';
 
-export default class CalculatorButtonsContainer extends React.Component {
+type Props = {
+  handleButtonPress: (string) => any,
+  reset: () => any,
+  deleteLast: () => any,
+}
+
+export default class CalculatorButtonsContainer extends Component<Props> {
   render() {
     const {handleButtonPress, reset, deleteLast} = this.props;
 
