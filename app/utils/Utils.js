@@ -1,6 +1,6 @@
 //@flow
 import Configs from '../configs/Configs';
-import {DECIMAL} from '../core/Operations';
+import {DECIMAL, COMMA} from '../core/Operations';
 
 const zip = (...rows: Array<any>) => [...rows[0]].map((_,c) => rows.map(row => row[c]));
 
@@ -25,18 +25,41 @@ export function isInArray<A>(value: A, array: Array<A>) {
 	return array.indexOf(value) > -1;
 }
 
+function decimalPlaces(num: string): number {
+  var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+  if (!match) { return 0; }
+  return Math.max(
+       0,
+       // Number of digits right of decimal point.
+       (match[1] ? match[1].length : 0)
+       // Adjust for scientific notation.
+       - (match[2] ? +match[2] : 0));
+}
+
+export function multiply(a: number, b: number): number {
+	const aDecimals = decimalPlaces(a.toString());
+	const bDecimals = decimalPlaces(b.toString());
+	const maxDecimals = Math.max(aDecimals, bDecimals);
+	const multiplier = Math.pow(10, maxDecimals);
+	const divisor = Math.pow(10, (maxDecimals * 2));
+	const result = (a * multiplier * b * multiplier) / divisor;
+	return result;
+}
+
+function useExponential(num: number): bool {
+	const absNum = Math.abs(num);
+	return (absNum >= Configs.MinScientificNotation || (absNum > 0 && absNum <= Configs.MaxScientificNotation))
+}
 export function numberWithCommas(x: string, round: ?boolean = true) {
 	const xNumber = Number(x);
+	const xString = (round && (decimalPlaces(x) > Configs.MaxPrecision)) ? xNumber.toFixed(Configs.MaxPrecision) : x;
 	const parseRegex: RegExp = /\B(?=(\d{3})+(?!\d))/g
-	if (round) { 
-		if (xNumber >= Configs.MinScientificNotation) {
-			return xNumber.toExponential(Configs.MaxPrecision);
-		}
-		return xNumber.toLocaleString('en', { maximumFractionDigits: Configs.MaxPrecision })
+	if (useExponential(xNumber)) {
+		return xNumber.toExponential(Configs.ExponentialDecimalPlaces);
 	} else {
-		const xString = x.toString();
+		// toLocaleString does not work in Android
 		const parts = xString.split(DECIMAL);
-		const head = parts[0].replace(parseRegex, ",") || '0';
+		const head = parts[0].replace(parseRegex, COMMA) || '0';
 		const tail = (parts.length > 1) ? parts[1].toString() : '';
 		const decimalJoin = (xString.indexOf(DECIMAL) < 0) ? '' : DECIMAL;
 		return head + decimalJoin + tail;

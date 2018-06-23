@@ -168,8 +168,6 @@ export default class CalculatorBrain {
 
 		let zippedOps: Array<[number,number,Operation]> = zipWithIndexTwice(ops); // e.g. 1 + 2 + 3 => returns (0, 0, +) (0, 0, -)
 		let numUnary: number = 0;
-		console.log('zipped: ');
-		console.log(zippedOps);
 		for (let idx = 0; idx < zippedOps.length; idx++) {
 			// adjust for unary ops
 			// e.g. sin cos 1 => 

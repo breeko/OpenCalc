@@ -1,5 +1,5 @@
 //@flow
-import {isInArray} from '../utils/Utils';
+import {isInArray, multiply} from '../utils/Utils';
 import {OperationType, OperationSubType, OperationArgs} from './OperationTypes';
 
 const OperationsOverloaded = Object.freeze({
@@ -43,6 +43,7 @@ export class Operation {
 
 const showAsStringOptionArgs = new Set([OperationArgs.PrintAlone, OperationArgs.PrintAsString, OperationArgs.NotParseable]);
 export const DECIMAL = '.';
+export const COMMA = ',';
 
 const Operations = {
   '.': new Operation(DECIMAL, OperationType.Constant, OperationSubType.Constant, 0, -1),
@@ -63,7 +64,7 @@ const Operations = {
   '−': new Operation('−', OperationType.Operation, OperationSubType.BinaryOp, function(x, y) { return x - y; }, 2.0),
   '+': new Operation('+', OperationType.Operation, OperationSubType.BinaryOp, function(x, y) { return x + y; }, 2.0),
   '÷': new Operation('÷', OperationType.Operation, OperationSubType.BinaryOp, function(x, y) { return x / y; }, 4.0),
-  '×': new Operation('×', OperationType.Operation, OperationSubType.BinaryOp, function(x, y) { return x * y; }, 4.0),
+  '×': new Operation('×', OperationType.Operation, OperationSubType.BinaryOp, function(x, y) { return multiply(x, y) }, 4.0),
   'xⁿ': new Operation('^', OperationType.Operation, OperationSubType.BinaryOp, function(x, y) { return Math.pow(x, y); }, 5.0),
   '=': new Operation('=', OperationType.Equals, OperationSubType.Equals, null),
   'c': new Operation('c', OperationType.Clear, OperationSubType.Clear, null),

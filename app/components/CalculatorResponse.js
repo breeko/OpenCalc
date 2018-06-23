@@ -65,13 +65,13 @@ const styles = StyleSheet.create({
 
     result: {
       color: Colors.WHITE,
-      fontSize: 50,
+      fontSize: 40,
       textAlignVertical: 'center',
       margin: 5,
     },
 
     description: {
-      fontSize: 60,
+      fontSize: 45,
     },
   });
 

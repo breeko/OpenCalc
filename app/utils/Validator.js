@@ -35,6 +35,8 @@ export default class Validator {
             return lastEffectiveOp.stringVal.indexOf(DECIMAL) === -1;
         } else if (lastOp && lastOp.operationSubType === OperationSubType.BackwardUnaryOp) {
             return false;
+        } else if (lastOp && lastOp.operationSubType === OperationSubType.ParenthesisClose) {
+            return false;
         } else {
             return true;
         }

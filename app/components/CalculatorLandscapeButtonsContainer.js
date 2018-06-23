@@ -75,7 +75,7 @@ export default class CalculatorLandscapeButtonsContainer extends Component<Props
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
+    flex: 1.5,
   },
 
   row: {

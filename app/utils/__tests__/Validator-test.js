@@ -44,7 +44,19 @@ it('must allow consecutive unary operators', () => {
 
 it('must allow parenthesis after unary operators', () => {
     const queue = createQueue(['sin']);
-    const valid = Validator.validOperator(newOperation('('), queue);
+    const valid = Validator.validParenthesis(newOperation('('), queue);
+    expect(valid).toBeTruthy();
+});
+
+it('must now allow a digit after a parenthesis close', () => {
+    const queue = createQueue([')']);
+    const valid = Validator.validDigit(newOperation('1'), queue);
+    expect(valid).toBeFalsy();
+});
+
+it('must allow a digit after a parenthesis open', () => {
+    const queue = createQueue(['(']);
+    const valid = Validator.validDigit(newOperation('1'), queue);
     expect(valid).toBeTruthy();
 });
 
