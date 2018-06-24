@@ -3640,7 +3640,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -30219,7 +30219,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ProgressBarAndroid\\ProgressBarAndroid.android.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ProgressBarAndroid\\ProgressBarAndroid.android.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -32965,7 +32965,7 @@ __d(function (global, _require2, module, exports, _dependencyMap) {
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\View\\View.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\View\\View.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -33560,7 +33560,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\ART\\ReactNativeART.js",
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\ART\\ReactNativeART.js",
       _class2,
       _temp2;
 
@@ -33591,7 +33591,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/ART/ReactNativeART.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/ART/ReactNativeART.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -38482,7 +38482,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Button.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Button.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38499,7 +38499,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/Button.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/Button.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -38673,7 +38673,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require2, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Text\\Text.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Text\\Text.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -38931,7 +38931,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Touchable\\Touchable.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Touchable\\Touchable.js";
 
   var BoundingDimensions = _require(_dependencyMap[0], 'BoundingDimensions');
 
@@ -39996,7 +39996,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableOpacity.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableOpacity.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -44097,7 +44097,7 @@ __d(function (global, _require2, module, exports, _dependencyMap) {
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Animated\\src\\createAnimatedComponent.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Animated\\src\\createAnimatedComponent.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -44117,7 +44117,7 @@ __d(function (global, _require2, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Animated/src/createAnimatedComponent.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Animated/src/createAnimatedComponent.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -44311,7 +44311,7 @@ __d(function (global, _require2, module, exports, _dependencyMap) {
 __d(function (global, _require2, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Image\\Image.android.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Image\\Image.android.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -44513,7 +44513,7 @@ __d(function (global, _require2, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollView.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollView.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -45519,7 +45519,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollViewStickyHeader.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollViewStickyHeader.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -45538,7 +45538,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -45710,7 +45710,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\CheckBox\\CheckBox.android.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\CheckBox\\CheckBox.android.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -45807,7 +45807,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\DatePicker\\DatePickerIOS.android.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\DatePicker\\DatePickerIOS.android.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -45826,7 +45826,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.android.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.android.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -45906,7 +45906,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\DrawerAndroid\\DrawerLayoutAndroid.android.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\DrawerAndroid\\DrawerLayoutAndroid.android.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -46148,7 +46148,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/StatusBar/StatusBar.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/StatusBar/StatusBar.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -46391,7 +46391,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\FlatList.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\FlatList.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -46410,7 +46410,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index3.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/FlatList.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/FlatList.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -46748,7 +46748,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp2,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\MetroListView.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\MetroListView.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46765,7 +46765,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/MetroListView.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/MetroListView.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -46982,7 +46982,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\ListView\\ListView.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\ListView\\ListView.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -47782,7 +47782,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/StaticRenderer.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/StaticRenderer.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -47867,7 +47867,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\RefreshControl\\RefreshControl.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\RefreshControl\\RefreshControl.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -47980,7 +47980,7 @@ __d(function (global, _require2, module, exports, _dependencyMap) {
   var _class,
       _temp,
       _initialiseProps,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\VirtualizedList.js",
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\VirtualizedList.js",
       _class2,
       _temp3,
       _class3,
@@ -48009,7 +48009,7 @@ __d(function (global, _require2, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index3.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/VirtualizedList.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/VirtualizedList.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -50233,7 +50233,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Image\\ImageBackground.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Image\\ImageBackground.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -50254,7 +50254,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Image/ImageBackground.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Image/ImageBackground.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -50435,7 +50435,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Keyboard\\KeyboardAvoidingView.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Keyboard\\KeyboardAvoidingView.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -50664,7 +50664,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\UnimplementedViews\\UnimplementedView.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\UnimplementedViews\\UnimplementedView.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -50683,7 +50683,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -50757,7 +50757,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Modal\\Modal.js",
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Modal\\Modal.js",
       _container;
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -50777,7 +50777,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Modal/Modal.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Modal/Modal.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -50987,7 +50987,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp2,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\ReactNative\\AppContainer.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\ReactNative\\AppContainer.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51004,7 +51004,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/ReactNative/AppContainer.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/ReactNative/AppContainer.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -51195,7 +51195,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   var _class,
       _temp,
       _initialiseProps,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\Inspector.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\Inspector.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51212,7 +51212,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/Inspector.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/Inspector.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -51566,7 +51566,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp2,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\InspectorOverlay.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\InspectorOverlay.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51583,7 +51583,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -51708,7 +51708,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\ElementBox.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\ElementBox.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -51727,7 +51727,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/ElementBox.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/ElementBox.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -51862,7 +51862,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\BorderBox.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\BorderBox.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -51881,7 +51881,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/BorderBox.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/BorderBox.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -51998,7 +51998,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\InspectorPanel.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\InspectorPanel.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -52020,7 +52020,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/InspectorPanel.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/InspectorPanel.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -52318,7 +52318,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\ElementProperties.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\ElementProperties.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52335,7 +52335,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/ElementProperties.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/ElementProperties.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -52603,7 +52603,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\BoxInspector.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\BoxInspector.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -52625,7 +52625,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/BoxInspector.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/BoxInspector.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -52895,7 +52895,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\StyleInspector.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\StyleInspector.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -52914,7 +52914,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/StyleInspector.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/StyleInspector.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -53055,7 +53055,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableHighlight.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableHighlight.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -53311,7 +53311,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\NetworkOverlay.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\NetworkOverlay.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -53330,7 +53330,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -54395,7 +54395,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\PerformanceOverlay.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Inspector\\PerformanceOverlay.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -54414,7 +54414,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -54542,7 +54542,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\ReactNative\\YellowBox.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\ReactNative\\YellowBox.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -54561,7 +54561,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/ReactNative/YellowBox.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/ReactNative/YellowBox.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -55353,7 +55353,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       _temp,
       _class2,
       _temp2,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Picker\\Picker.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Picker\\Picker.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -55375,7 +55375,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/Picker/Picker.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/Picker/Picker.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -55522,7 +55522,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   var _class,
       _temp,
       _initialiseProps,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Picker\\PickerAndroid.android.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Picker\\PickerAndroid.android.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -55541,7 +55541,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/Picker/PickerAndroid.android.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/Picker/PickerAndroid.android.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -55723,7 +55723,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ProgressViewIOS\\ProgressViewIOS.android.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ProgressViewIOS\\ProgressViewIOS.android.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -55742,7 +55742,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -55834,7 +55834,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp2,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\SectionList.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\SectionList.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -55853,7 +55853,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/SectionList.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/SectionList.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -55980,7 +55980,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\VirtualizedSectionList.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Lists\\VirtualizedSectionList.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -56000,7 +56000,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -56450,7 +56450,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\SegmentedControlIOS\\SegmentedControlIOS.android.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\SegmentedControlIOS\\SegmentedControlIOS.android.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -56469,7 +56469,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.android.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.android.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -56549,7 +56549,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Slider\\Slider.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Slider\\Slider.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -56688,7 +56688,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Switch\\Switch.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\Switch\\Switch.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -56820,7 +56820,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableFlatList.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableFlatList.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -56837,7 +56837,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableFlatList.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableFlatList.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -57003,7 +57003,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableRow.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableRow.js";
 
   var Animated = _require(_dependencyMap[0], 'Animated');
 
@@ -57466,7 +57466,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableListView.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Experimental\\SwipeableRow\\SwipeableListView.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -57483,7 +57483,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -57776,7 +57776,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\TabBarIOS\\TabBarIOS.android.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\TabBarIOS\\TabBarIOS.android.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -57793,7 +57793,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.android.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.android.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -57860,7 +57860,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\TabBarIOS\\TabBarItemIOS.android.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\TabBarIOS\\TabBarItemIOS.android.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -57879,7 +57879,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.android.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.android.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -57950,7 +57950,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require2, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\TextInput\\TextInput.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\TextInput\\TextInput.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -58966,7 +58966,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 __d(function (global, _require, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroid.android.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ToolbarAndroid\\ToolbarAndroid.android.js";
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -59095,7 +59095,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp2,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ViewPager\\ViewPagerAndroid.android.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\ViewPager\\ViewPagerAndroid.android.js";
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -59112,7 +59112,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/ViewPager/ViewPagerAndroid.android.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/ViewPager/ViewPagerAndroid.android.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -59259,7 +59259,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\WebView\\WebView.android.js",
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\Components\\WebView\\WebView.android.js",
       _class,
       _temp2;
 
@@ -59278,7 +59278,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/WebView/WebView.android.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native/Libraries/Components/WebView/WebView.android.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -59941,7 +59941,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\ReactNative\\renderApplication.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native\\Libraries\\ReactNative\\renderApplication.js";
 
   var AppContainer = _require(_dependencyMap[0], 'AppContainer');
 
@@ -61272,7 +61272,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _class,
       _temp2,
-      _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\app\\App.js";
+      _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\app\\App.js";
 
   var _reactNative = _require(_dependencyMap[2], "react-native");
 
@@ -61304,6 +61304,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _reactNativeEasyToast2 = _interopRequireDefault(_reactNativeEasyToast);
 
+  var _reactNativeSwipeGestures = _require(_dependencyMap[11], "react-native-swipe-gestures");
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61319,7 +61321,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/app/App.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/app/App.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -61436,6 +61438,15 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         this.updateDisplay();
       }
     }, {
+      key: "onSwipe",
+      value: function onSwipe(gestureName, gestureState) {
+        switch (gestureName) {
+          case _reactNativeSwipeGestures.swipeDirections.SWIPE_LEFT:
+            this.switchButtons();
+            break;
+        }
+      }
+    }, {
       key: "_switchButtons",
       value: function _switchButtons() {
         this.setState({
@@ -61460,7 +61471,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         var switchButtons = this.state.orientation === _Orientation.OrientationType.Portrait ? _LayoutBuilder2.default.buildSwitchButtons(this, this._switchButtons) : _react3.default.createElement(_reactNative.View, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 122
+            lineNumber: 131
           }
         });
         return _react3.default.createElement(
@@ -61470,7 +61481,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             onLayout: this._updateOrientation.bind(this),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 125
+              lineNumber: 134
             }
           },
           _react3.default.createElement(_reactNativeEasyToast2.default, {
@@ -61479,7 +61490,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             opacity: 0.8,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 126
+              lineNumber: 135
             }
           }),
           _react3.default.createElement(_CalculatorResponse2.default, {
@@ -61488,7 +61499,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             orientation: this.state.orientation,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 127
+              lineNumber: 136
             }
           }),
           buttonContainer,
@@ -61513,7 +61524,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       backgroundColor: _Colors2.default.BLUE_DARK
     }
   });
-},491,[118,179,12,492,500,493,494,503,495,499,508],"app\\App.js");
+},491,[118,179,12,492,500,493,494,503,495,499,509,508],"app\\App.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -61527,7 +61538,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorResponse.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorResponse.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -61560,7 +61571,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/app/components/CalculatorResponse.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/app/components/CalculatorResponse.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -62479,7 +62490,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\app\\utils\\LayoutBuilder.js";
+    var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\app\\utils\\LayoutBuilder.js";
 
     var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -62511,6 +62522,10 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
     var _Orientation = _require(_dependencyMap[7], "../utils/Orientation");
 
+    var _reactNativeSwipeGestures = _require(_dependencyMap[8], "react-native-swipe-gestures");
+
+    var _reactNativeSwipeGestures2 = _interopRequireDefault(_reactNativeSwipeGestures);
+
     function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62522,33 +62537,33 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
         _createClass(LayoutBuilder, null, [{
             key: "buildSwitchButtons",
-            value: function buildSwitchButtons(obj, onPress) {
+            value: function buildSwitchButtons(obj, onSwipe) {
                 var styles = {
                     handle: {
                         position: 'absolute',
                         backgroundColor: _Colors2.default.BLUE_DARK,
                         borderTopRightRadius: 20,
                         borderBottomRightRadius: 20,
-                        width: _Constants2.default.width / 40.0,
+                        width: _Constants2.default.width / 30.0,
                         height: _Constants2.default.height / 5.0,
                         top: _Constants2.default.maxDimension / 2.0
                     }
                 };
 
                 var handle = _react2.default.createElement(
-                    _reactNative.TouchableOpacity,
+                    _reactNativeSwipeGestures2.default,
                     {
                         style: styles.handle,
-                        onPress: onPress.bind(obj),
+                        onSwipe: onSwipe.bind(obj),
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 29
+                            lineNumber: 31
                         }
                     },
                     _react2.default.createElement(_reactNative.View, {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 29
+                            lineNumber: 31
                         }
                     })
                 );
@@ -62564,7 +62579,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     deleteLast: _deleteLast.bind(obj),
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 44
+                        lineNumber: 46
                     }
                 });
 
@@ -62576,7 +62591,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     paste: _handlePastePress.bind(obj),
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 49
+                        lineNumber: 51
                     }
                 });
 
@@ -62588,7 +62603,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     paste: _handlePastePress.bind(obj),
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 56
+                        lineNumber: 58
                     }
                 });
 
@@ -62604,7 +62619,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     }();
 
     exports.default = LayoutBuilder;
-},503,[118,12,504,506,507,493,494,499],"app\\utils\\LayoutBuilder.js");
+},503,[118,12,504,506,507,493,494,499,508],"app\\utils\\LayoutBuilder.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -62618,7 +62633,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorButtonsContainer.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorButtonsContainer.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -62643,7 +62658,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/app/components/CalculatorButtonsContainer.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/app/components/CalculatorButtonsContainer.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -62922,7 +62937,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorButton.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorButton.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -62947,7 +62962,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/app/components/CalculatorButton.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/app/components/CalculatorButton.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -63036,7 +63051,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorAdditionalButtonsContainer.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorAdditionalButtonsContainer.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -63061,7 +63076,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/app/components/CalculatorAdditionalButtonsContainer.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/app/components/CalculatorAdditionalButtonsContainer.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -63342,7 +63357,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _index2 = _interopRequireDefault(_index);
 
-  var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorLandscapeButtonsContainer.js";
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\app\\components\\CalculatorLandscapeButtonsContainer.js";
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -63367,7 +63382,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "C:/Users/Branko/Documents/OpenCalc/app/components/CalculatorLandscapeButtonsContainer.js",
+    filename: "c:/Users/Branko/Documents/OpenCalc/app/components/CalculatorLandscapeButtonsContainer.js",
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -63764,6 +63779,209 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   });
 },507,[118,179,12,505],"app\\components\\CalculatorLandscapeButtonsContainer.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.swipeDirections = undefined;
+
+  var _react2 = _require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = _require(_dependencyMap[1], "./../react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native-swipe-gestures\\index.js";
+
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = _require(_dependencyMap[2], "react-native");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    GestureRecognizer: {
+      displayName: "GestureRecognizer"
+    }
+  };
+
+  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native-swipe-gestures/index.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _reactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var swipeDirections = exports.swipeDirections = {
+    SWIPE_UP: 'SWIPE_UP',
+    SWIPE_DOWN: 'SWIPE_DOWN',
+    SWIPE_LEFT: 'SWIPE_LEFT',
+    SWIPE_RIGHT: 'SWIPE_RIGHT'
+  };
+  var swipeConfig = {
+    velocityThreshold: 0.3,
+    directionalOffsetThreshold: 80
+  };
+
+  function isValidSwipe(velocity, velocityThreshold, directionalOffset, directionalOffsetThreshold) {
+    return Math.abs(velocity) > velocityThreshold && Math.abs(directionalOffset) < directionalOffsetThreshold;
+  }
+
+  var GestureRecognizer = _wrapComponent("GestureRecognizer")(function (_Component) {
+    _inherits(GestureRecognizer, _Component);
+
+    function GestureRecognizer(props, context) {
+      _classCallCheck(this, GestureRecognizer);
+
+      var _this = _possibleConstructorReturn(this, (GestureRecognizer.__proto__ || Object.getPrototypeOf(GestureRecognizer)).call(this, props, context));
+
+      _this.swipeConfig = _extends(swipeConfig, props.config);
+      return _this;
+    }
+
+    _createClass(GestureRecognizer, [{
+      key: "componentWillReceiveProps",
+      value: function componentWillReceiveProps(props) {
+        this.swipeConfig = _extends(swipeConfig, props.config);
+      }
+    }, {
+      key: "componentWillMount",
+      value: function componentWillMount() {
+        var responderEnd = this._handlePanResponderEnd.bind(this);
+
+        var shouldSetResponder = this._handleShouldSetPanResponder.bind(this);
+
+        this._panResponder = _reactNative.PanResponder.create({
+          onStartShouldSetPanResponder: shouldSetResponder,
+          onMoveShouldSetPanResponder: shouldSetResponder,
+          onPanResponderRelease: responderEnd,
+          onPanResponderTerminate: responderEnd
+        });
+      }
+    }, {
+      key: "_handleShouldSetPanResponder",
+      value: function _handleShouldSetPanResponder(evt, gestureState) {
+        return evt.nativeEvent.touches.length === 1 && !this._gestureIsClick(gestureState);
+      }
+    }, {
+      key: "_gestureIsClick",
+      value: function _gestureIsClick(gestureState) {
+        return Math.abs(gestureState.dx) < 5 && Math.abs(gestureState.dy) < 5;
+      }
+    }, {
+      key: "_handlePanResponderEnd",
+      value: function _handlePanResponderEnd(evt, gestureState) {
+        var swipeDirection = this._getSwipeDirection(gestureState);
+
+        this._triggerSwipeHandlers(swipeDirection, gestureState);
+      }
+    }, {
+      key: "_triggerSwipeHandlers",
+      value: function _triggerSwipeHandlers(swipeDirection, gestureState) {
+        var _props = this.props,
+            onSwipe = _props.onSwipe,
+            onSwipeUp = _props.onSwipeUp,
+            onSwipeDown = _props.onSwipeDown,
+            onSwipeLeft = _props.onSwipeLeft,
+            onSwipeRight = _props.onSwipeRight;
+        var SWIPE_LEFT = swipeDirections.SWIPE_LEFT,
+            SWIPE_RIGHT = swipeDirections.SWIPE_RIGHT,
+            SWIPE_UP = swipeDirections.SWIPE_UP,
+            SWIPE_DOWN = swipeDirections.SWIPE_DOWN;
+        onSwipe && onSwipe(swipeDirection, gestureState);
+
+        switch (swipeDirection) {
+          case SWIPE_LEFT:
+            onSwipeLeft && onSwipeLeft(gestureState);
+            break;
+
+          case SWIPE_RIGHT:
+            onSwipeRight && onSwipeRight(gestureState);
+            break;
+
+          case SWIPE_UP:
+            onSwipeUp && onSwipeUp(gestureState);
+            break;
+
+          case SWIPE_DOWN:
+            onSwipeDown && onSwipeDown(gestureState);
+            break;
+        }
+      }
+    }, {
+      key: "_getSwipeDirection",
+      value: function _getSwipeDirection(gestureState) {
+        var SWIPE_LEFT = swipeDirections.SWIPE_LEFT,
+            SWIPE_RIGHT = swipeDirections.SWIPE_RIGHT,
+            SWIPE_UP = swipeDirections.SWIPE_UP,
+            SWIPE_DOWN = swipeDirections.SWIPE_DOWN;
+        var dx = gestureState.dx,
+            dy = gestureState.dy;
+
+        if (this._isValidHorizontalSwipe(gestureState)) {
+          return dx > 0 ? SWIPE_RIGHT : SWIPE_LEFT;
+        } else if (this._isValidVerticalSwipe(gestureState)) {
+          return dy > 0 ? SWIPE_DOWN : SWIPE_UP;
+        }
+
+        return null;
+      }
+    }, {
+      key: "_isValidHorizontalSwipe",
+      value: function _isValidHorizontalSwipe(gestureState) {
+        var vx = gestureState.vx,
+            dy = gestureState.dy;
+        var _swipeConfig = this.swipeConfig,
+            velocityThreshold = _swipeConfig.velocityThreshold,
+            directionalOffsetThreshold = _swipeConfig.directionalOffsetThreshold;
+        return isValidSwipe(vx, velocityThreshold, dy, directionalOffsetThreshold);
+      }
+    }, {
+      key: "_isValidVerticalSwipe",
+      value: function _isValidVerticalSwipe(gestureState) {
+        var vy = gestureState.vy,
+            dx = gestureState.dx;
+        var _swipeConfig2 = this.swipeConfig,
+            velocityThreshold = _swipeConfig2.velocityThreshold,
+            directionalOffsetThreshold = _swipeConfig2.directionalOffsetThreshold;
+        return isValidSwipe(vy, velocityThreshold, dx, directionalOffsetThreshold);
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        return _react3.default.createElement(_reactNative.View, _extends({}, this.props, this._panResponder.panHandlers, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 105
+          }
+        }));
+      }
+    }]);
+
+    return GestureRecognizer;
+  }(_react2.Component));
+
+  ;
+  exports.default = GestureRecognizer;
+},508,[118,179,12],"node_modules\\react-native-swipe-gestures\\index.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
@@ -63777,7 +63995,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
     var _index2 = _interopRequireDefault(_index);
 
-    var _jsxFileName = "C:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native-easy-toast\\index.js";
+    var _jsxFileName = "c:\\Users\\Branko\\Documents\\OpenCalc\\node_modules\\react-native-easy-toast\\index.js";
 
     var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -63802,7 +64020,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     };
 
     var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-        filename: "C:/Users/Branko/Documents/OpenCalc/node_modules/react-native-easy-toast/index.js",
+        filename: "c:/Users/Branko/Documents/OpenCalc/node_modules/react-native-easy-toast/index.js",
         components: _components,
         locals: [module],
         imports: [_react3.default]
@@ -63991,7 +64209,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         fadeOutDuration: 500,
         opacity: 1
     };
-},508,[118,179,12,129],"node_modules\\react-native-easy-toast\\index.js");
+},509,[118,179,12,129],"node_modules\\react-native-easy-toast\\index.js");
 require(44);
 require(11);
 //# sourceMappingURL=index.map

@@ -14,6 +14,7 @@ import {isNumeric} from './utils/Utils'
 import { Orientation, OrientationType } from './utils/Orientation';
 
 import Toast, {DURATION} from 'react-native-easy-toast';
+import {swipeDirections} from 'react-native-swipe-gestures';
 
 type Props = {
   brain: CalculatorBrain,
@@ -91,6 +92,14 @@ export default class App extends Component<Props, State> {
   _deleteLast() {
     this.props.brain.deleteLast();
     this.updateDisplay();
+  }
+
+  onSwipe(gestureName, gestureState) {
+    switch (gestureName) {
+      case swipeDirections.SWIPE_LEFT:
+        this.switchButtons();
+        break;
+    }
   }
 
   _switchButtons() {
