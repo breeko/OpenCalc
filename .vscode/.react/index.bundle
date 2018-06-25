@@ -61304,8 +61304,6 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _reactNativeEasyToast2 = _interopRequireDefault(_reactNativeEasyToast);
 
-  var _reactNativeSwipeGestures = _require(_dependencyMap[11], "react-native-swipe-gestures");
-
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61438,15 +61436,6 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         this.updateDisplay();
       }
     }, {
-      key: "onSwipe",
-      value: function onSwipe(gestureName, gestureState) {
-        switch (gestureName) {
-          case _reactNativeSwipeGestures.swipeDirections.SWIPE_LEFT:
-            this.switchButtons();
-            break;
-        }
-      }
-    }, {
       key: "_switchButtons",
       value: function _switchButtons() {
         this.setState({
@@ -61466,14 +61455,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     }, {
       key: "render",
       value: function render() {
-        var buttonContainer = _LayoutBuilder2.default.buildButtonContainer(this, this.state.orientation, this.state.altButtons, this._handleButtonPress, this._reset, this._deleteLast, this._handleCopyPress, this._handlePastePress);
+        var buttonContainer = _LayoutBuilder2.default.buildButtonContainer(this, this.state.orientation, this.state.altButtons, this._handleButtonPress, this._reset, this._deleteLast, this._handleCopyPress, this._handlePastePress, this._switchButtons);
 
-        var switchButtons = this.state.orientation === _Orientation.OrientationType.Portrait ? _LayoutBuilder2.default.buildSwitchButtons(this, this._switchButtons) : _react3.default.createElement(_reactNative.View, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 131
-          }
-        });
         return _react3.default.createElement(
           _reactNative.View,
           {
@@ -61481,7 +61464,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             onLayout: this._updateOrientation.bind(this),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 134
+              lineNumber: 123
             }
           },
           _react3.default.createElement(_reactNativeEasyToast2.default, {
@@ -61490,7 +61473,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             opacity: 0.8,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 135
+              lineNumber: 124
             }
           }),
           _react3.default.createElement(_CalculatorResponse2.default, {
@@ -61499,11 +61482,10 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             orientation: this.state.orientation,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 136
+              lineNumber: 125
             }
           }),
-          buttonContainer,
-          switchButtons
+          buttonContainer
         );
       }
     }]);
@@ -61524,7 +61506,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       backgroundColor: _Colors2.default.BLUE_DARK
     }
   });
-},491,[118,179,12,492,500,493,494,503,495,499,509,508],"app\\App.js");
+},491,[118,179,12,492,500,493,494,503,495,499,509],"app\\App.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -62572,14 +62554,15 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             }
         }, {
             key: "buildButtonContainer",
-            value: function buildButtonContainer(obj, orientation, altButtons, _handleButtonPress, _reset, _deleteLast, _handleCopyPress, _handlePastePress) {
+            value: function buildButtonContainer(obj, orientation, altButtons, _handleButtonPress, _reset, _deleteLast, _handleCopyPress, _handlePastePress, _handleSwitchButton) {
                 var calculatorButtonsContainer = _react2.default.createElement(_CalculatorButtonsContainer2.default, {
                     handleButtonPress: _handleButtonPress.bind(obj),
                     reset: _reset.bind(obj),
                     deleteLast: _deleteLast.bind(obj),
+                    switchButton: _handleSwitchButton.bind(obj),
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 46
+                        lineNumber: 47
                     }
                 });
 
@@ -62589,9 +62572,10 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     deleteLast: _deleteLast.bind(obj),
                     copy: _handleCopyPress.bind(obj),
                     paste: _handlePastePress.bind(obj),
+                    switchButton: _handleSwitchButton.bind(obj),
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 51
+                        lineNumber: 54
                     }
                 });
 
@@ -62603,7 +62587,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     paste: _handlePastePress.bind(obj),
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 58
+                        lineNumber: 63
                     }
                 });
 
@@ -62685,14 +62669,15 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         var _props = this.props,
             handleButtonPress = _props.handleButtonPress,
             reset = _props.reset,
-            deleteLast = _props.deleteLast;
+            deleteLast = _props.deleteLast,
+            switchButton = _props.switchButton;
         return _react3.default.createElement(
           _reactNative.View,
           {
             style: styles.container,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 17
+              lineNumber: 18
             }
           },
           _react3.default.createElement(
@@ -62701,209 +62686,247 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               style: styles.row,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 18
-              }
-            },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'c',
-              handleButtonPress: reset,
-              __source: {
-                fileName: _jsxFileName,
                 lineNumber: 19
               }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '(',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 20
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: ')',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 21
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '←',
-              handleButtonPress: deleteLast,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 22
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNative.View,
-            {
-              style: styles.row,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 25
-              }
             },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '7',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 26
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '8',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 27
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '9',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 28
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '÷',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 29
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNative.View,
-            {
-              style: styles.row,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 32
-              }
-            },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '4',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 33
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '5',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 34
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '6',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 35
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '×',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 36
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNative.View,
-            {
-              style: styles.row,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 39
-              }
-            },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '1',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 40
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '2',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 41
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '3',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 42
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '−',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 43
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNative.View,
-            {
-              style: styles.row,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 46
-              }
-            },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '.',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 47
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '0',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 48
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '=',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 49
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '+',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 50
-              }
-            })
+            _react3.default.createElement(
+              _reactNative.View,
+              {
+                style: styles.switchButtonGroup,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 21
+                }
+              },
+              _react3.default.createElement(_CalculatorButton2.default, {
+                operator: '<',
+                handleButtonPress: switchButton,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 22
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _reactNative.View,
+              {
+                style: styles.buttonGroup,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 25
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 26
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'c',
+                  handleButtonPress: reset,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 27
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '(',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 28
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: ')',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 29
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '←',
+                  handleButtonPress: deleteLast,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 30
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 33
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '7',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 34
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '8',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 35
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '9',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 36
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '÷',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 37
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 40
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '4',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 41
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '5',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 42
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '6',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 43
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '×',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 44
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 47
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '1',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 48
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '2',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 49
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '3',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 50
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '−',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 51
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 54
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '.',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 55
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '0',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 56
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '=',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 57
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '+',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 58
+                  }
+                })
+              )
+            )
           )
         );
       }
@@ -62921,6 +62944,12 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     row: {
       flex: 1,
       flexDirection: 'row'
+    },
+    buttonGroup: {
+      flex: 10
+    },
+    switchButtonGroup: {
+      flex: 1
     }
   });
 },504,[118,179,12,505],"app\\components\\CalculatorButtonsContainer.js");
@@ -63105,14 +63134,15 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             reset = _props.reset,
             deleteLast = _props.deleteLast,
             copy = _props.copy,
-            paste = _props.paste;
+            paste = _props.paste,
+            switchButton = _props.switchButton;
         return _react3.default.createElement(
           _reactNative.View,
           {
             style: styles.container,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 19
+              lineNumber: 20
             }
           },
           _react3.default.createElement(
@@ -63121,209 +63151,247 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               style: styles.row,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 20
-              }
-            },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'c',
-              handleButtonPress: reset,
-              __source: {
-                fileName: _jsxFileName,
                 lineNumber: 21
               }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '(',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 22
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: ')',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 23
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '←',
-              handleButtonPress: deleteLast,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 24
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNative.View,
-            {
-              style: styles.row,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 27
-              }
             },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'sin',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 28
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'cos',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 29
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'tan',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 30
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'π',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 31
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNative.View,
-            {
-              style: styles.row,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 34
-              }
-            },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'sinh',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 35
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'cosh',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 36
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'tanh',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 37
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'e',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 38
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNative.View,
-            {
-              style: styles.row,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 41
-              }
-            },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'log',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 42
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'log10',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 43
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'xⁿ',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 44
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '%',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 45
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNative.View,
-            {
-              style: styles.row,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 48
-              }
-            },
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '!',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 49
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: '√',
-              handleButtonPress: handleButtonPress,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 50
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'copy',
-              handleButtonPress: copy,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 51
-              }
-            }),
-            _react3.default.createElement(_CalculatorButton2.default, {
-              operator: 'paste',
-              handleButtonPress: paste,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 52
-              }
-            })
+            _react3.default.createElement(
+              _reactNative.View,
+              {
+                style: styles.switchButtonGroup,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 23
+                }
+              },
+              _react3.default.createElement(_CalculatorButton2.default, {
+                operator: '>',
+                handleButtonPress: switchButton,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 24
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _reactNative.View,
+              {
+                style: styles.buttonGroup,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 27
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 28
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'c',
+                  handleButtonPress: reset,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 29
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '(',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 30
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: ')',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 31
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '←',
+                  handleButtonPress: deleteLast,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 32
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 34
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'sin',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 35
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'cos',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 36
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'tan',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 37
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'π',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 38
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 41
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'sinh',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 42
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'cosh',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 43
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'tanh',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 44
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'e',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 45
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 48
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'log',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 49
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'log10',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 50
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'xⁿ',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 51
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '%',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 52
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _reactNative.View,
+                {
+                  style: styles.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 55
+                  }
+                },
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '!',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 56
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: '√',
+                  handleButtonPress: handleButtonPress,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 57
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'copy',
+                  handleButtonPress: copy,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 58
+                  }
+                }),
+                _react3.default.createElement(_CalculatorButton2.default, {
+                  operator: 'paste',
+                  handleButtonPress: paste,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 59
+                  }
+                })
+              )
+            )
           )
         );
       }
@@ -63339,6 +63407,12 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     row: {
       flex: 1,
       flexDirection: 'row'
+    },
+    buttonGroup: {
+      flex: 10
+    },
+    switchButtonGroup: {
+      flex: 1
     }
   });
 

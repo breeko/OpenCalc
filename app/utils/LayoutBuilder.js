@@ -41,19 +41,24 @@ export default class LayoutBuilder {
         _deleteLast: () => any,
         _handleCopyPress: () => any,
         _handlePastePress: () => any,
+        _handleSwitchButton: () => any,
     ) {
             
         const calculatorButtonsContainer = <CalculatorButtonsContainer
                 handleButtonPress={_handleButtonPress.bind(obj)}
                 reset={_reset.bind(obj)}
-                deleteLast={_deleteLast.bind(obj)}/>;
+                deleteLast={_deleteLast.bind(obj)}
+                switchButton={_handleSwitchButton.bind(obj)}
+                />;
             
         const calculatorAdditionalButtonsContainer = <CalculatorAdditionalButtonsContainer
             handleButtonPress={_handleButtonPress.bind(obj)}
             reset={_reset.bind(obj)}
             deleteLast={_deleteLast.bind(obj)}
             copy={_handleCopyPress.bind(obj)}
-            paste={_handlePastePress.bind(obj)}/>;
+            paste={_handlePastePress.bind(obj)}
+            switchButton={_handleSwitchButton.bind(obj)}
+            />;
 
         const calculatorLandscapeButtonsContainer = <CalculatorLandscapeButtonsContainer
             handleButtonPress={_handleButtonPress.bind(obj)}

@@ -14,7 +14,6 @@ import {isNumeric} from './utils/Utils'
 import { Orientation, OrientationType } from './utils/Orientation';
 
 import Toast, {DURATION} from 'react-native-easy-toast';
-import {swipeDirections} from 'react-native-swipe-gestures';
 
 type Props = {
   brain: CalculatorBrain,
@@ -94,14 +93,6 @@ export default class App extends Component<Props, State> {
     this.updateDisplay();
   }
 
-  onSwipe(gestureName, gestureState) {
-    switch (gestureName) {
-      case swipeDirections.SWIPE_LEFT:
-        this.switchButtons();
-        break;
-    }
-  }
-
   _switchButtons() {
     this.setState({altButtons: !this.state.altButtons});
   }
@@ -125,10 +116,8 @@ export default class App extends Component<Props, State> {
       this._deleteLast,
       this._handleCopyPress,
       this._handlePastePress,
+      this._switchButtons,
     );
-    const switchButtons = (this.state.orientation === OrientationType.Portrait) ? 
-      LayoutBuilder.buildSwitchButtons(this, this._switchButtons) : 
-      <View/>;
 
     return (
       <View style={styles.container} onLayout={this._updateOrientation.bind(this)}>
@@ -138,7 +127,6 @@ export default class App extends Component<Props, State> {
           description={this.state.description}
           orientation={this.state.orientation}/>
         {buttonContainer}
-        {switchButtons}
       </View>
     );
   }
