@@ -42,22 +42,29 @@ export class Operation {
 }
 
 const showAsStringOptionArgs = new Set([OperationArgs.PrintAlone, OperationArgs.PrintAsString, OperationArgs.NotParseable]);
+const addParenthesis = new Set([OperationArgs.AddParenthesis]);
+
 export const DECIMAL = '.';
 export const COMMA = ',';
+
+function roundZero(func, x) {
+  const out = func(x);
+  return (Math.abs(out) < Number.EPSILON) ? 0 : out;
+}
 
 const Operations = {
   '.': new Operation(DECIMAL, OperationType.Constant, OperationSubType.Constant, 0, -1),
   'π': new Operation('π', OperationType.Constant, OperationSubType.Constant, Math.PI, -1, showAsStringOptionArgs),
   'e': new Operation('e', OperationType.Constant, OperationSubType.Constant, Math.E, -1, showAsStringOptionArgs),
-  '√': new Operation('√', OperationType.Operation, OperationSubType.UnaryOp, Math.sqrt, 6.0),
-  'cos': new Operation('cos', OperationType.Operation, OperationSubType.UnaryOp, Math.cos, 6.0),
-  'sin': new Operation('sin', OperationType.Operation, OperationSubType.UnaryOp, Math.sin, 6.0),
-  'tan': new Operation('tan', OperationType.Operation, OperationSubType.UnaryOp, Math.tan, 6.0),
-  'cosh': new Operation('cosh', OperationType.Operation, OperationSubType.UnaryOp, Math.cosh, 6.0),
-  'sinh': new Operation('sinh', OperationType.Operation, OperationSubType.UnaryOp, Math.sinh, 6.0),
-  'tanh': new Operation('tanh', OperationType.Operation, OperationSubType.UnaryOp, Math.tanh, 6.0),
-  'log': new Operation('log', OperationType.Operation, OperationSubType.UnaryOp, Math.log, 6.0),
-  'log10': new Operation('log10', OperationType.Operation, OperationSubType.UnaryOp, Math.log10, 6.0),
+  '√': new Operation('√', OperationType.Operation, OperationSubType.UnaryOp, Math.sqrt, 6.0, addParenthesis),
+  'cos': new Operation('cos', OperationType.Operation, OperationSubType.UnaryOp, function(x) {return roundZero(Math.cos, x)}, 6.0, addParenthesis),
+  'sin': new Operation('sin', OperationType.Operation, OperationSubType.UnaryOp, function(x) {return roundZero(Math.sin, x)}, 6.0, addParenthesis),
+  'tan': new Operation('tan', OperationType.Operation, OperationSubType.UnaryOp, function(x) {return roundZero(Math.tan, x)}, 6.0, addParenthesis),
+  'cosh': new Operation('cosh', OperationType.Operation, OperationSubType.UnaryOp, function(x) {return roundZero(Math.cosh, x)}, 6.0, addParenthesis),
+  'sinh': new Operation('sinh', OperationType.Operation, OperationSubType.UnaryOp, function(x) {return roundZero(Math.sinh, x)}, 6.0, addParenthesis),
+  'tanh': new Operation('tanh', OperationType.Operation, OperationSubType.UnaryOp, function(x) {return roundZero(Math.tanh, x)}, 6.0, addParenthesis),
+  'log': new Operation('log', OperationType.Operation, OperationSubType.UnaryOp, Math.log, 6.0, addParenthesis),
+  'log10': new Operation('log10', OperationType.Operation, OperationSubType.UnaryOp, Math.log10, 6.0, addParenthesis),
   '%': new Operation('%', OperationType.Operation, OperationSubType.BackwardUnaryOp, function(x) {return x / 100.0}, 6.0),
   '!': new Operation('!', OperationType.Operation, OperationSubType.BackwardUnaryOp, function(x) {return factorial(x)}, 6.0),
   'neg': new Operation('⁻', OperationType.Operation, OperationSubType.UnaryOp, function(x) {return -x;}, 6.0),

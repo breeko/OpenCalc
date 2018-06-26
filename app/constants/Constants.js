@@ -6,6 +6,7 @@ const Constants = Object.freeze({
     width: Dimensions.get('window').width,
     maxDimension: Math.max(Dimensions.get('window').height, Dimensions.get('window').width),
     minDimension: Math.min(Dimensions.get('window').height, Dimensions.get('window').width),
+    baseMaxDimension: 667.0,
 });
 
 export default Constants;

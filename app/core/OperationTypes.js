@@ -23,4 +23,5 @@ export const OperationArgs = Object.freeze({
   'PrintAlone': 2,
   'PrintAsString': 3,
   'NotParseable': 4,
+  'AddParenthesis': 5,
 });

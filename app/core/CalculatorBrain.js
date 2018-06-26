@@ -32,6 +32,9 @@ export default class CalculatorBrain {
 
 		if (opToAdd) {
 			this.queue.push(opToAdd);
+			if (opToAdd.operationArgs.has(OperationArgs.AddParenthesis)) {
+				this.queue.push(newOperation('('));
+			}
 			this.cleared = cleared;
 		}
 	}
@@ -181,7 +184,7 @@ export default class CalculatorBrain {
 
 		let maxPriority: [number,number,Operation] = zippedOps.reduce(function(a, b) { 
 			if (a[2].operationSubType === OperationSubType.UnaryOp) {
-				// right to left on unary ops
+				// right to left on unary ops two unary ops
 				// e.g. sin cos 1, evaluate cos(1) first
 				return a[2].priority > b[2].priority ? a : b;	
 			}
@@ -203,7 +206,7 @@ export default class CalculatorBrain {
 				if (isNaN(num1.val)) { 
 					throw 'Number too long';
 				}
-				acc += op.val(num1.val);
+				acc = op.val(num1.val);
 				tail = numbers.slice(numIdx + 1, numbers.length);
 				evaluatedNumber = true;
 			} else if (isInArray(op.operationSubType, Array(OperationSubType.UnaryOp, OperationSubType.BackwardUnaryOp))) {

@@ -65,13 +65,13 @@ const styles = StyleSheet.create({
 
     result: {
       color: Colors.WHITE,
-      fontSize: 40,
+      fontSize: 40 * (Constants.maxDimension / Constants.baseMaxDimension),
       textAlignVertical: 'center',
       margin: 5,
     },
 
     description: {
-      fontSize: 45,
+      fontSize: 45 * (Constants.maxDimension / Constants.baseMaxDimension),
     },
   });
 

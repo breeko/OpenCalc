@@ -12,8 +12,6 @@ import Constants from '../constants/Constants'
 
 import { OrientationType } from '../utils/Orientation';
 
-import GestureRecognizer from 'react-native-swipe-gestures';
-
 export default class LayoutBuilder {
     
     static buildSwitchButtons(obj: Component<any, any>, onSwipe: (number, number) => void) {

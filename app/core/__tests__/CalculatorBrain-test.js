@@ -49,4 +49,10 @@ describe('CalculatorBrain', () => {
     const out = checkDisplayAndResult('1 × - 4');
     expect(out).toBe(('1 × - 4', '-4'));
   });
+
+  it('handles unary ops correctly', () => {
+    const out = checkDisplayAndResult('10 ! %');
+    expect(out).toBe(('10!%', '36,288'));
+  });
+
 });

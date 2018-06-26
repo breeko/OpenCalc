@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Colors from '../constants/Colors';
+import Constants from '../constants/Constants'
 
 type Props = {
   operator: string,
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   },
 item: {
   color: Colors.WHITE,
-  fontSize: 22
+  fontSize: 22 * (Constants.maxDimension / Constants.baseMaxDimension),
   }
 });
 
