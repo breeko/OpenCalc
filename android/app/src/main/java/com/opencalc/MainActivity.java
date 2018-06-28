@@ -1,4 +1,4 @@
-package com.opencalc;
+package com.twelve31labs.opencalc;
 
 import com.facebook.react.ReactActivity;
 

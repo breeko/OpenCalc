@@ -98,7 +98,7 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "com.opencalc"
+        applicationId "com.twelve31labs.opencalc"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
