@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
 item: {
   color: Colors.WHITE,
-  fontSize: 22 * (Constants.maxDimension / Constants.baseMaxDimension),
+  fontSize: 20 * (Constants.maxDimension / Constants.baseMaxDimension),
   }
 });
 
