@@ -121,8 +121,8 @@ export default class App extends Component<Props, State> {
       <View style={styles.container} onLayout={this._updateOrientation.bind(this)}>
         <Toast ref="toast" position='top' opacity={0.8}/>
         <CalculatorResponse
-          result={this.state.topDisplay}
-          description={this.state.description}
+          topDisplay={this.state.topDisplay}
+          bottomDisplay={this.state.bottomDisplay}
           orientation={this.state.orientation}/>
         {buttonContainer}
       </View>

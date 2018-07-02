@@ -93,9 +93,9 @@ function getOverloadedOperation(opString: string, queue: ?Array<Operation>) {
   return opString;
 };
 
-export function newOperation(opString: string, queue: ?Array<Operation>, operationArgs: ?Array<number>) {
+export function newOperation(opString: string, queue: ?Array<Operation>, operationArgs: ?Array<number>): Operation {
   const finalOpString = getOverloadedOperation(opString, queue);
-  const newOp = Operations[finalOpString] || new Operation(finalOpString, OperationType.Constant, OperationSubType.Constant, Number(finalOpString));
+  const newOp = (finalOpString in Operations) ? {...Operations[finalOpString]} : new Operation(finalOpString, OperationType.Constant, OperationSubType.Constant, Number(finalOpString));
   if (operationArgs) {
     newOp.operationArgs = new Set([...newOp.operationArgs, ...operationArgs]);
   }

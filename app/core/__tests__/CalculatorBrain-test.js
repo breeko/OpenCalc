@@ -56,7 +56,7 @@ describe('CalculatorBrain', () => {
   });
 
   it('handles unary ops correctly', () => {
-    const out = checkDisplayAndResult('( 8 - 3 ) × 5');
+    const out = checkDisplayAndResult('( 8 − 3 ) × 5');
     expect(out).toBe(('(8 - 3) × 5', '25'));
   });
 

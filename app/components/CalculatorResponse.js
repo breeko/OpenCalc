@@ -8,23 +8,22 @@ import { isNumeric } from '../utils/Utils';
 import { OrientationType } from '../utils/Orientation';
 
 type Props = {
-  result: string,
-  description: string,
+  topDisplay: string,
+  bottomDisplay: string,
   orientation: number,
 };
 
 
 class CalculatorResponse extends Component<Props> {
-  resultsScroll: ScrollView;
-  descriptionScroll: ScrollView;
+  topDisplayScroll: ScrollView;
+  bottomDisplayScroll: ScrollView;
 
   constructor() {
     super();
   }
 
   render() {
-    const {result, description, orientation} = this.props;
-    const copyDisabled = !description || !isNumeric(description.toString().replace(',',''));
+    const {bottomDisplay, topDisplay, orientation} = this.props;
     const h = Constants.height;
     const w = Constants.width;
     
@@ -32,16 +31,16 @@ class CalculatorResponse extends Component<Props> {
       <SafeAreaView style={styles.resultsContainer} >
         <ScrollView 
           style={styles.resultContainer}
-          ref={(scroll) => {this.resultsScroll = scroll;}}
-          onContentSizeChange={() => {this.resultsScroll.scrollToEnd(false);}}
+          ref={(scroll) => {this.topDisplayScroll = scroll;}}
+          onContentSizeChange={() => {this.topDisplayScroll.scrollToEnd(false);}}
           horizontal>
-          <Text adjustsFontSizeToFit numberOfLines={1} style={styles.result}>{result}</Text>
+          <Text adjustsFontSizeToFit numberOfLines={1} style={styles.topDisplay}>{topDisplay}</Text>
         </ScrollView>
         <ScrollView 
           style={styles.resultContainer } 
-          ref={(scroll) => {this.descriptionScroll = scroll;}}
+          ref={(scroll) => {this.bottomDisplayScroll = scroll;}}
           horizontal>
-          <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.result, styles.description]}>{description}</Text>
+          <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.topDisplay, styles.bottomDisplay]}>{bottomDisplay}</Text>
         </ScrollView>
       </SafeAreaView>
     );
@@ -63,14 +62,14 @@ const styles = StyleSheet.create({
       flex: 1,
     },
 
-    result: {
+    topDisplay: {
       color: Colors.WHITE,
       fontSize: 40 * (Constants.maxDimension / Constants.baseMaxDimension),
       textAlignVertical: 'center',
       margin: 5,
     },
 
-    description: {
+    bottomDisplay: {
       fontSize: 45 * (Constants.maxDimension / Constants.baseMaxDimension),
     },
   });
