@@ -8,6 +8,6 @@ A free (thought and beer) calculator designed for all Apple devices.
 - Ability back-space
 - Simple clear design
 
-Source available at https://www.github.com/breeko/OpenCalc
+[More info](https://medium.com/ml-everything/a-free-open-source-ipad-calculator-and-why-your-app-wont-make-you-any-money-41eb5bd30d0e)
 
 MIT License

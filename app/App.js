@@ -20,10 +20,9 @@ type Props = {
 };
 
 type State = {
-  display: string,
-  description: string,
+  topDisplay: string,
+  bottomDisplay: string,
   altButtons: boolean,
-  stored: string,
   orientation: number,
 };
 
@@ -33,10 +32,9 @@ export default class App extends Component<Props, State> {
   };
 
   state = {
-    display: ' ',
-    description: ' ',
+    topDisplay: ' ',
+    bottomDisplay: ' ',
     altButtons: false,
-    stored: '',
     orientation: OrientationType.Portrait,
   };
 
@@ -61,8 +59,8 @@ export default class App extends Component<Props, State> {
 
   _handleCopyPress() {
     const result: string = this.props.brain.getResult().replace(' ','').replace(',','');
-    const display: string = this.props.brain.getDisplay().replace(' ','').replace(',','');
-    const saveString = isNumeric(result) ? result : isNumeric(display) ? display : null;
+    const topDisplay: string = this.props.brain.getDisplay().replace(' ','').replace(',','');
+    const saveString = isNumeric(result) ? result : isNumeric(topDisplay) ? topDisplay : null;
     if (saveString) {
       Clipboard.setString(saveString);      
       this.refs.toast.show('Copied ' + saveString + ' to clipboard', DURATION.LENGTH_SHORT, () => {});
@@ -98,11 +96,11 @@ export default class App extends Component<Props, State> {
   }
 
   updateDisplay() {
-    const newDisplay = this.props.brain.getDisplay();
-    const newDescription = this.props.brain.getResult();
+    const newTopDisplay = this.props.brain.getDisplay();
+    const newBottomDisplay = this.props.brain.getResult();
     this.setState({
-      display: newDisplay,
-      description: newDescription
+      topDisplay: newTopDisplay,
+      bottomDisplay: newBottomDisplay
     });
   }
 
@@ -123,7 +121,7 @@ export default class App extends Component<Props, State> {
       <View style={styles.container} onLayout={this._updateOrientation.bind(this)}>
         <Toast ref="toast" position='top' opacity={0.8}/>
         <CalculatorResponse
-          result={this.state.display}
+          result={this.state.topDisplay}
           description={this.state.description}
           orientation={this.state.orientation}/>
         {buttonContainer}

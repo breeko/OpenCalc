@@ -55,4 +55,14 @@ describe('CalculatorBrain', () => {
     expect(out).toBe(('10!%', '36,288'));
   });
 
+  it('handles unary ops correctly', () => {
+    const out = checkDisplayAndResult('( 8 - 3 ) × 5');
+    expect(out).toBe(('(8 - 3) × 5', '25'));
+  });
+
+  it('handles unary ops correctly', () => {
+    const out = checkDisplayAndResult('8 − 3 × 5');
+    expect(out).toBe(('8 − 3 × 5', '-7'));
+  });
+
 });
