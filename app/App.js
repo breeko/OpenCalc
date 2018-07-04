@@ -58,9 +58,9 @@ export default class App extends Component<Props, State> {
   }
 
   _handleCopyPress() {
-    const result: string = this.props.brain.getResult().replace(' ','').replace(',','');
+    const bottomDisplay: string = this.props.brain.getResult().replace(' ','').replace(',','');
     const topDisplay: string = this.props.brain.getDisplay().replace(' ','').replace(',','');
-    const saveString = isNumeric(result) ? result : isNumeric(topDisplay) ? topDisplay : null;
+    const saveString = isNumeric(bottomDisplay) ? bottomDisplay : isNumeric(topDisplay) ? topDisplay : null;
     if (saveString) {
       Clipboard.setString(saveString);      
       this.refs.toast.show('Copied ' + saveString + ' to clipboard', DURATION.LENGTH_SHORT, () => {});

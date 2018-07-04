@@ -1,4 +1,3 @@
-//@flow
 import {numberWithCommas, multiply} from '../Utils';
 import Configs from '../../configs/Configs'
 

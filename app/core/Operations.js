@@ -31,13 +31,18 @@ export class Operation {
     operationSubType: number, 
     val: any, 
     priority: ?number, 
-    operationArgs: ?Set<number>) {
-      this.stringVal = stringVal;
-      this.operationType = operationType;
-      this.operationSubType = operationSubType;
-      this.val = val;
-      this.priority = priority || -1;
-      this.operationArgs = operationArgs || new Set();
+    operationArgs: ?Set<number>
+  ) {
+    this.stringVal = stringVal;
+    this.operationType = operationType;
+    this.operationSubType = operationSubType;
+    this.val = val;
+    this.priority = priority || -1;
+    this.operationArgs = operationArgs || new Set();
+  }
+
+  copy() {
+    return new Operation(this.stringVal, this.operationType, this.operationSubType, this.val, this.priority,this.operationArgs);
   }
 }
 
@@ -95,7 +100,7 @@ function getOverloadedOperation(opString: string, queue: ?Array<Operation>) {
 
 export function newOperation(opString: string, queue: ?Array<Operation>, operationArgs: ?Array<number>): Operation {
   const finalOpString = getOverloadedOperation(opString, queue);
-  const newOp = (finalOpString in Operations) ? {...Operations[finalOpString]} : new Operation(finalOpString, OperationType.Constant, OperationSubType.Constant, Number(finalOpString));
+  const newOp = (finalOpString in Operations) ? Operations[finalOpString].copy() : new Operation(finalOpString, OperationType.Constant, OperationSubType.Constant, Number(finalOpString));
   if (operationArgs) {
     newOp.operationArgs = new Set([...newOp.operationArgs, ...operationArgs]);
   }

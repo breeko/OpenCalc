@@ -106,7 +106,7 @@ export default class CalculatorBrain {
 				this.queue.push(newOperation(newNum, this.queue));
 			}
 		} else {
-			this.queue.pop(); // 32332608 / 9 => NaN
+			this.queue.pop();
 		}
 	}
 
@@ -132,7 +132,7 @@ export default class CalculatorBrain {
 
 
 	evaluateParenthesis(operators: Array<Operation>, parenthesisPriority:number = 0): Array<Operation> {
-		// Updates operators priorities with parenthesis
+		// Returns operators with updated priority based on parenthesis
 		if (operators.length == 0) {
 			return operators;
 		}
@@ -145,8 +145,9 @@ export default class CalculatorBrain {
 			parenthesisPriority += op.priority;
 			parenthesisPriority = Math.max(0, parenthesisPriority);
 		} else {
-			op.priority += parenthesisPriority;
-			evaluatedOps.push(op);
+			const newOp = op.copy();
+			newOp.priority += parenthesisPriority;
+			evaluatedOps.push(newOp);
 		}
 		
 		const remaining: Array<Operation> = this.evaluateParenthesis(remainingOps, parenthesisPriority);

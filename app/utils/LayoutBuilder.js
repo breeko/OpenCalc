@@ -13,23 +13,7 @@ import Constants from '../constants/Constants'
 import { OrientationType } from '../utils/Orientation';
 
 export default class LayoutBuilder {
-    
-    static buildSwitchButtons(obj: Component<any, any>, onSwipe: (number, number) => void) {
-        const styles = {
-            handle: {
-                position: 'absolute',
-                backgroundColor: Colors.BLUE_DARK,
-                borderTopRightRadius: 20,
-                borderBottomRightRadius: 20,
-                width: Constants.width / 30.0,
-                height: Constants.height / 5.0,
-                top: Constants.maxDimension / 2.0, 
-            }
-        }
-        const handle = <GestureRecognizer style={styles.handle} onSwipe={onSwipe.bind(obj)}><View/></GestureRecognizer>;
-        return handle;
-    }
-    
+       
     static buildButtonContainer(
         obj: Component<any, any>,
         orientation: number,
